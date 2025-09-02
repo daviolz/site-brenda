@@ -9,7 +9,7 @@
         /* Variáveis de cores */
         :root {
             --primary: #C25264;
-            --secondary: #ffb6c1;
+            --secondary: #f8d0d6;
             --accent: #7e3663;
             --dark: #333333;
             --light: #f9f9f9;
@@ -146,10 +146,11 @@
             padding: 15px 40px;
             border-radius: 30px;
             text-decoration: none;
-            font-weight: bold;
             transition: all 0.3s;
             border: 2px solid var(--primary);
-            font-size: 1.1rem;
+            font-size: 1.2rem;
+            text-align: center;
+            margin-bottom: 20px;
         }
         
         .btn:hover {
@@ -208,6 +209,7 @@
         .about-text p {
             margin-bottom: 20px;
             font-size: 1.1rem;
+            text-align: center;
         }
         
         .about-image {
@@ -229,12 +231,14 @@
         }
         
         .about-image2 {
-            flex: 1;
             border-radius: 10px;
-            overflow: hidden;
-            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
             transition: transform 0.3s;
             text-align: center;
+            background-color: var(--secondary);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
         }
         /* Curso */
         .course {
@@ -265,6 +269,10 @@
             font-size: 3rem;
             color: var(--primary);
             margin-bottom: 20px;
+        }
+
+        .curso-image{
+            padding: 3em;  
         }
         
         .highlight-card h3 {
@@ -570,12 +578,43 @@
     <!-- Curso -->
     <section id="course" class="course">
         <div class="container">
-            <h2 class="section-title">Meu Curso</h2>
+            <h2 class="section-title">Meu Curso</h2>            <div class="about-content">
+                <div class="about-text">
+                    <p>Desenvolvi um método exclusivo para quem quer se tornar um modelo de maquiagem profissional. Meu curso não ensina apenas técnicas de aplicação, mas todo o caminho para construir uma carreira de sucesso.</p>
+                    <p>Com aulas práticas e teóricas, você aprenderá desde os fundamentos até as técnicas mais avançadas, sempre com foco nas tendências que estarão em alta em 2025.</p>
+                    
+                    <div class="course-highlights">
+                        <div class="highlight-card">
+                            <i class="fas fa-gem"></i>
+                            <h3>Conteúdo Exclusivo</h3>
+                            <p>Aulas gravadas e materiais complementares para você estudar no seu ritmo.</p>
+                        </div>
+                        <div class="highlight-card">
+                            <i class="fas fa-certificate"></i>
+                            <h3>Certificado</h3>
+                            <p>Ao final do curso, receba um certificado que comprova suas habilidades.</p>
+                        </div>
+                        <div class="highlight-card">
+                            <i class="fas fa-users"></i>
+                            <h3>Comunidade</h3>
+                            <p>Participe de um grupo exclusivo para networking e troca de experiências.</p>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+
+
 
             <div class="container">
                 <div class="about-image2">
-                <img src="img/curso.jpg" alt="Curso de Maquiagem">
+                <img src="img/curso.jpg" alt="Curso de Maquiagem" class="curso-image">
+                <div class="text-curso">
+                    <h3>Gerenciamento das redes socias</h3>
+                    <p>Aprenda a criar um portfólio online atraente e a utilizar as redes sociais para promover seu trabalho e atrair clientes.</p>
                 </div>
+                <a href="#contact" class="btn" style="margin-top: 55px;">Quero me inscrever</a>
+            </div>
             </div>
         </div>
     </section>

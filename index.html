@@ -150,7 +150,8 @@
             border: 2px solid var(--primary);
             font-size: 1.2rem;
             text-align: center;
-            margin-bottom: 20px;
+            max-width: 300px;
+            min-width: 200px;
         }
         
         .btn:hover {
@@ -234,11 +235,13 @@
             border-radius: 10px;
             transition: transform 0.3s;
             text-align: center;
-            background-color: var(--secondary);
+            
             display: flex;
-            flex-direction: column;
             align-items: center;
             padding: 20px;
+        }
+        .about-image2:hover {
+            transform: translateY(-10px);
         }
         /* Curso */
         .course {
@@ -272,7 +275,14 @@
         }
 
         .curso-image{
-            padding: 3em;  
+            padding: 3em; 
+            max-width: 700px;
+            min-width: 500px;
+            border-radius: 10px;
+            align-items: center;
+            justify-content: center;
+            display: flex;
+            margin-top: 3em;
         }
         
         .highlight-card h3 {
@@ -280,6 +290,68 @@
             margin-bottom: 15px;
         }
         
+        /* Carousel */
+    .carousel {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+    }
+    .carousel-btn {
+        color: #00000080;
+        border: none;
+        border-radius: 50%;
+        width: 60px;
+        height: 60px;
+        font-size: 2rem;
+        cursor: pointer;    
+    }
+    .carousel-btn:hover {
+        background: var(--accent);
+    }
+    .carousel-slide {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .carousel-slide img,
+.carousel-slide .text-curso {
+    opacity: 1;
+    transition: opacity 0.5s;
+}
+
+.carousel-slide.fade img,
+.carousel-slide.fade .text-curso {
+    opacity: 0;
+}
+
+    .carousel-title {
+        font-size: 1.8rem;
+        margin: 10px 0;
+        color: var(--primary);
+    }
+    .carousel-desc {
+        font-size: 1.1rem;
+    }
+
+    .carousel-dots {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 2em;
+}
+.carousel-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: #fff;
+    border: 2px solid var(--primary);
+    cursor: pointer;
+    transition: background 0.2s;
+}
+.carousel-dot.active {
+    background: var(--primary);
+}
         /* Depoimentos */
         .testimonials {
             background: linear-gradient(to right, #f8d1dc, #f9c0d3);
@@ -564,9 +636,9 @@
             <h2 class="section-title">Sobre Mim</h2>
             <div class="about-content">
                 <div class="about-text">
-                    <p>Minha jornada no mundo da maquiagem começou há mais de X anos, quando descobri que a maquiagem vai muito além da estética - é uma forma de arte e autoexpressão.</p>
-                    <p>Acredito que cada rosto é uma tela única, e estou aqui para te ensinar como realçar sua beleza natural enquanto constrói uma carreira promissora nesse mercado.</p>
-                    <a href="#contact" class="btn">Fale comigo</a>
+                    <p style="text-align: justify;">Minha jornada no mundo da maquiagem começou há mais de X anos, quando descobri que a maquiagem vai muito além da estética - é uma forma de arte e autoexpressão.</p>
+                    <p style="text-align: justify;">Acredito que cada rosto é uma tela única, e estou aqui para te ensinar como realçar sua beleza natural enquanto constrói uma carreira promissora nesse mercado.</p>
+                    <a href="#contact" class="btn" style="margin-top: 2em;">Fale comigo</a>
                 </div>
                 <div class="about-image">
                     <img src="img/capa.jpg" alt="Brenda - Modelo de Maquiagem">
@@ -578,7 +650,8 @@
     <!-- Curso -->
     <section id="course" class="course">
         <div class="container">
-            <h2 class="section-title">Meu Curso</h2>            <div class="about-content">
+            <h2 class="section-title">Meu Curso</h2>            
+            <div class="about-content">
                 <div class="about-text">
                     <p>Desenvolvi um método exclusivo para quem quer se tornar um modelo de maquiagem profissional. Meu curso não ensina apenas técnicas de aplicação, mas todo o caminho para construir uma carreira de sucesso.</p>
                     <p>Com aulas práticas e teóricas, você aprenderá desde os fundamentos até as técnicas mais avançadas, sempre com foco nas tendências que estarão em alta em 2025.</p>
@@ -589,15 +662,15 @@
                             <h3>Conteúdo Exclusivo</h3>
                             <p>Aulas gravadas e materiais complementares para você estudar no seu ritmo.</p>
                         </div>
-                        <div class="highlight-card">
+                        <div class="highlight-card" style="margin-top: 70px;">
                             <i class="fas fa-certificate"></i>
                             <h3>Certificado</h3>
                             <p>Ao final do curso, receba um certificado que comprova suas habilidades.</p>
                         </div>
                         <div class="highlight-card">
-                            <i class="fas fa-users"></i>
-                            <h3>Comunidade</h3>
-                            <p>Participe de um grupo exclusivo para networking e troca de experiências.</p>
+                            <i class="fas fa-question"></i>
+                            <h3>Dúvidas</h3>
+                            <p>Tire suas dúvidas comigo e outros alunos.</p>
                         </div>
                     </div>
                     
@@ -606,17 +679,21 @@
 
 
 
-            <div class="container">
-                <div class="about-image2">
-                <img src="img/curso.jpg" alt="Curso de Maquiagem" class="curso-image">
-                <div class="text-curso">
-                    <h3>Gerenciamento das redes socias</h3>
-                    <p>Aprenda a criar um portfólio online atraente e a utilizar as redes sociais para promover seu trabalho e atrair clientes.</p>
-                </div>
-                <a href="#contact" class="btn" style="margin-top: 55px;">Quero me inscrever</a>
+<div class="container">
+    <div class="carousel about-image2">
+        <button class="carousel-btn" id="prevSlide"><i class="fas fa-chevron-left"></i></button>
+        <div class="carousel-slide">
+            <img id="carousel-img" src="img/make.png" alt="Curso de Maquiagem" class="curso-image">
+             <div class="carousel-dots" id="carousel-dots"></div>
+            <div class="text-curso">
+                <h3 id="carousel-title" class="carousel-title">Gerenciamento das redes socias</h3>
+                <p id="carousel-desc" class="carousel-desc">Aprenda a criar um portfólio online atraente e a utilizar as redes sociais para promover seu trabalho e atrair clientes.</p>
             </div>
-            </div>
+            <a href="#contact" class="btn" style="margin-top: 55px;">Quero me inscrever</a>
         </div>
+        <button class="carousel-btn" id="nextSlide"><i class="fas fa-chevron-right"></i></button>
+    </div>
+</div>
     </section>
 
     <!-- Depoimentos -->
@@ -783,6 +860,82 @@
         document.querySelector('.mobile-menu-btn').addEventListener('click', () => {
             alert('Menu mobile será aberto! Em uma implementação real, isto abriria um menu de navegação.');
         });
+
+
+        // Carrossel simples
+
+        const slides = [
+    {
+        img: 'img/make.png',
+        title: 'Gerenciamento das redes socias',
+        desc: 'Aprenda a criar um portfólio online atraente e a utilizar as redes sociais para promover seu trabalho e atrair clientes.'
+    },
+    {
+        img: 'img/make-2.png',
+        title: 'Técnicas de Maquiagem',
+        desc: 'Domine técnicas profissionais para realçar a beleza de cada cliente e se destacar no mercado.'
+    },
+    {
+        img: 'img/make-3.png',
+        title: 'Postura e Presença em Ensaios',
+        desc: 'Como se portar em fotos, vídeos e eventos para valorizar o trabalho do maquiador.'
+    }
+];
+
+let currentSlide = 0;
+
+function showSlide(index) {
+    const slide = slides[index];
+    document.getElementById('carousel-img').src = slide.img;
+    document.getElementById('carousel-title').textContent = slide.title;
+    document.getElementById('carousel-desc').textContent = slide.desc;
+}
+
+document.getElementById('prevSlide').onclick = function() {
+    currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+    showSlide(currentSlide);
+};
+document.getElementById('nextSlide').onclick = function() {
+    currentSlide = (currentSlide + 1) % slides.length;
+    showSlide(currentSlide);
+};
+
+// Inicializa o carrossel
+showSlide(currentSlide);
+
+
+function renderDots() {
+    const dotsContainer = document.getElementById('carousel-dots');
+    dotsContainer.innerHTML = '';
+    slides.forEach((_, idx) => {
+        const dot = document.createElement('span');
+        dot.className = 'carousel-dot' + (idx === currentSlide ? ' active' : '');
+        dot.onclick = () => {
+            currentSlide = idx;
+            showSlide(currentSlide);
+            renderDots();
+        };
+        dotsContainer.appendChild(dot);
+    });
+}
+
+// Atualize showSlide para também atualizar os dots:
+function showSlide(index) {
+    const slide = slides[index];
+    const slideDiv = document.querySelector('.carousel-slide');
+    // Adiciona fade
+    slideDiv.classList.add('fade');
+    setTimeout(() => {
+        document.getElementById('carousel-img').src = slide.img;
+        document.getElementById('carousel-title').textContent = slide.title;
+        document.getElementById('carousel-desc').textContent = slide.desc;
+        renderDots();
+        // Remove fade após atualizar conteúdo
+        slideDiv.classList.remove('fade');
+    }, 400); // tempo menor que o transition do CSS
+}
+// Inicializa o carrossel e os dots
+showSlide(currentSlide);
     </script>
 </body>
 </html>

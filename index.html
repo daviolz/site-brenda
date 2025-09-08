@@ -3,14 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Curso de maquiagem profissional - aprenda técnicas, postura em ensaios e gestão de carreira com Brenda.">
     <title>Star Model Academy - Curso de Maquiagem Profissional</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         /* Variáveis de cores */
         :root {
-            --primary: #C25264;
-            --secondary: #f8d0d6;
-            --accent: #7e3663;
+            --primary: #9D7166;
+            --secondary: #D8D4C9;
+            --accent: #846F5E;
             --dark: #333333;
             --light: #f9f9f9;
             --white: #ffffff;
@@ -113,7 +114,7 @@
         
         /* Hero Section */
         .hero {
-            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(img/fundo.avif);
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(img/fundo.jpg) no-repeat center center/cover;
             background-size: cover;
             background-position: center;
             height: 100vh;
@@ -164,7 +165,7 @@
         .btn-secondary {
             background-color: transparent;
             color: var(--white);
-            border: 2px solid var(--white);
+            border: 2px solid var(--dark);
             margin-left: 15px;
         }
         
@@ -354,7 +355,7 @@
 }
         /* Depoimentos */
         .testimonials {
-            background: linear-gradient(to right, #f8d1dc, #f9c0d3);
+            background: var(--secondary);
         }
         
         .testimonials-container {
@@ -401,7 +402,58 @@
             object-fit: cover;
             margin-right: 15px;
         }
-        
+
+        /* Preço */
+        .preco-container {
+            background-color: var(--light);
+            padding: 30px;
+            border-radius: 10px;
+            text-align: center;      /* Centraliza o bloco */
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            margin-top: 50px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;     /* Centraliza o conteúdo */
+        }
+        .preco-container h3 {
+            color: var(--primary);
+            margin-bottom: 20px;
+            font-size: 1.8em;
+        }
+        .preco-container p {
+            font-size: 1.3em;
+            color: var(--dark);
+            text-align: left;        /* Alinha o texto à esquerda */
+            max-width: 400px;        /* Limita a largura para não ficar muito largo */
+            width: 100%;
+        }
+        hr {
+            border-top: 1px solid #a19e9e;
+            margin: 40px 0;
+            width: 100%;
+            position: relative;
+        }
+        .preco-container .garantia {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            margin-top: 50px;
+            justify-content: center;
+            margin-right: 50px;
+        }
+
+        .preco-container .garantia img {
+            margin-right: 10px;
+            width: 70px;
+        }
+
+        .preco-container .garantia p {
+            margin-top: 0;
+            font-size: 1.2em;
+            color: var(--dark);
+            text-align: center;
+        }
+
         /* Contato */
         .contact-content {
             display: flex;
@@ -740,13 +792,32 @@
                     </div>
                 </div>
             </div>
+
+            <hr>
+
+            <div class="preco-container">
+                <h3>Curso completo de Modelo de maquiagem</h3>
+                <p><i class="fas fa-check-circle" style="color: green; margin-bottom: 25px;"></i> Acesso vitalício ao conteúdo do curso</p>
+                <p><i class="fas fa-check-circle" style="color: green; margin-bottom: 25px;"></i> Certificado de conclusão</p>
+                <p><i class="fas fa-check-circle" style="color: green; margin-bottom: 35px;"></i> 10 módulos exclusivos</p>
+                <p style="font-size: 1.5em; color: var(--primary); text-align: center; ">De <span style="text-decoration: line-through; color: rgb(255, 0, 0);">R$ 397,00</span> </p>
+                <p style="font-size: 1.5em; color: var(--primary); text-align: center;">Por apenas</p>
+                <p style="font-size: 2em; font-weight: bold; color: var(--primary); text-align: center; margin-bottom: 15px;"><span style="color: green;">R$ 97,00</span> à vista</p>
+
+                <a href="#contact" class="btn" style="margin-top: 20px;">Quero me inscrever</a>
+
+                <div class="garantia">
+                    <img src="img/garantia.png" alt="garantia">
+                    <p style="margin-top: 20px; font-size: 0.9em; color: var(--dark); text-align: center;">Garantia de 7 dias - Satisfação garantida ou seu dinheiro de volta!</p>
+                </div>
+            </div>
         </div>
     </section>
 
     <!-- Contato -->
     <section id="contact">
         <div class="container">
-            <h2 class="section-title">Entre em Contato</h2>
+            <h2 class="section-title">Suporte</h2>
             <div class="contact-content">
                 <div class="contact-info">
                     <h3>Estou à disposição para esclarecer qualquer dúvida sobre o curso.</h3>
